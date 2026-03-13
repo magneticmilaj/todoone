@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+/* ─── 과목별 네비게이션 ─── */
+.subject-nav {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.subject-nav-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-label {
+  font-size: 12px;
+  color: #999;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.subject-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.english-btn {
+  background: #e8f4fd;
+  color: #1565c0;
+}
+.english-btn:hover, .english-btn.active {
+  background: #1565c0;
+  color: #fff;
+}
+
+.hangul-btn {
+  background: #fce4ec;
+  color: #c62828;
+}
+.hangul-btn:hover, .hangul-btn.active {
+  background: #c62828;
+  color: #fff;
+}
+
+.math-btn {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.math-btn:hover, .math-btn.active {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* ─── 뒤로가기 바 ─── */
+.back-bar {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.back-link {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #222;
+}
+
+/* ─── 플레이스홀더 (이미지 미등록 상태) ─── */
+.placeholder-notice {
+  padding: 80px 24px;
+  text-align: center;
+  color: #bbb;
+}
+
+.placeholder-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.placeholder-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.placeholder-desc {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ─── 상세 이미지 래퍼 ─── */
+.detail-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상세 이미지 */
+.detail-img {
+  width: 100%;
+  display: block;
+}
+
+/* ─── 무료체험 섹션 ─── */
+.free-trial-section {
+  background: #f8f4ff;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.trial-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #3a1aab;
+  margin-bottom: 10px;
+}
+
+.trial-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.trial-input-wrap {
+  display: flex;
+  gap: 10px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.trial-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid #c5b8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.trial-input:focus {
+  border-color: #6941e0;
+}
+
+.trial-btn {
+  padding: 14px 22px;
+  background: #6941e0;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.trial-btn:hover {
+  background: #5232b8;
+}
+
+.trial-error {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #e53935;
+}
+
+/* ─── 하단 고정 바 ─── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 12px 20px;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+}
+
+.buy-btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 480px;
+  padding: 16px 0;
+  background: #ff5722;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 14px;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover {
+  background: #e64a19;
+}
+
+/* sticky 버튼에 가리는 부분 보정 */
+.bottom-spacer {
+  height: 80px;
+}
+
+/* ─── 앱 선택 모달 ─── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px 28px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.modal-desc {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-store-btn {
+  flex: 1;
+  padding: 16px 8px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.modal-store-btn span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+.ios-btn {
+  background: #000;
+  color: #fff;
+}
+
+.android-btn {
+  background: #01875f;
+  color: #fff;
+}
+
+.modal-close {
+  font-size: 14px;
+  color: #aaa;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px;
+}
+
+/* ─── 우측 고정 네비게이션 ─── */
+.side-nav {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 80;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  padding: 10px 6px;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 80px;
+  scrollbar-width: none;
+}
+
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.side-nav-item {
+  display: block;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #999;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.side-nav-item:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.side-nav-item.active {
+  background: #6941e0;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* 960px 이하에서 우측 네비 숨김 */
+@media (max-width: 960px) {
+  .side-nav {
+    display: none;
+  }
+}
+
+/* ─── 반응형 ─── */
+@media (max-width: 480px) {
+  .trial-input-wrap {
+    flex-direction: column;
+  }
+
+  .trial-btn {
+    width: 100%;
+  }
+
+  .buy-btn {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+}

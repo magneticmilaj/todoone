@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토도원 - 아이의 학습을 바꾸는 교육 앱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 상단 과목별 네비게이션 -->
+  <nav class="subject-nav">
+    <div class="subject-nav-inner">
+      <span class="nav-label">과목별 상세</span>
+      <a href="english.html" class="subject-btn english-btn">🔤 토도영어</a>
+      <a href="hangul.html" class="subject-btn hangul-btn">가 토도한글</a>
+      <a href="math.html" class="subject-btn math-btn">✚ 토도수학</a>
+    </div>
+  </nav>
+
+  <main class="detail-wrap">
+
+    <section id="sec-1" data-label="인트로">
+      <img src="1_인트로.jpg" alt="토도원 인트로" class="detail-img">
+    </section>
+
+    <section id="sec-2" data-label="성적표">
+      <img src="2_토도원성적표.jpg" alt="토도원 성적표" class="detail-img">
+    </section>
+
+    <section id="sec-3" data-label="리뷰">
+      <img src="2-1_토도원리뷰.jpg" alt="토도원 리뷰" class="detail-img">
+    </section>
+
+    <section id="sec-4" data-label="학습패드">
+      <img src="3_토도원어떤학습패드.jpg" alt="토도원 어떤 학습패드" class="detail-img">
+      <img src="3-1_무료업데이트.jpg" alt="무료 업데이트" class="detail-img">
+    </section>
+
+    <section id="sec-5" data-label="구성(라이트)">
+      <img src="3-3_토도원구성품모음(라이트).gif" alt="토도원 구성품 (라이트)" class="detail-img">
+    </section>
+
+    <section id="sec-6" data-label="구성(풀패키지)">
+      <img src="3-3_토도원구성품모음(풀패키지).gif" alt="토도원 구성품 (풀패키지)" class="detail-img">
+    </section>
+
+    <section id="sec-7" data-label="나만의패드">
+      <img src="4_나만의학습전용패드.jpg" alt="나만의 학습 전용 패드" class="detail-img">
+      <img src="4-1_학습습관.jpg" alt="학습 습관" class="detail-img">
+      <img src="4-2_와이파이없이.jpg" alt="와이파이 없이 학습" class="detail-img">
+    </section>
+
+    <section id="sec-8" data-label="태블릿스펙">
+      <img src="5_태블릿스팩.jpg" alt="태블릿 스펙" class="detail-img">
+    </section>
+
+    <section id="sec-9" data-label="커리큘럼">
+      <img src="6_토도원커리큘럼.gif" alt="토도원 커리큘럼" class="detail-img">
+      <img src="6-1_토도원커리큘럼.jpg" alt="토도원 커리큘럼 상세" class="detail-img">
+    </section>
+
+    <section id="sec-10" data-label="영어유치원">
+      <img src="7_영어유치원모드.gif" alt="영어 유치원 모드" class="detail-img">
+    </section>
+
+    <section id="sec-11" data-label="영어업데이트">
+      <img src="8_영어업데이트.gif" alt="영어 업데이트" class="detail-img">
+    </section>
+
+    <section id="sec-12" data-label="수학업데이트">
+      <img src="9_수학업데이트.gif" alt="수학 업데이트" class="detail-img">
+    </section>
+
+    <section id="sec-13" data-label="시작가이드">
+      <img src="10_시작가이드.jpg" alt="시작 가이드" class="detail-img">
+    </section>
+
+    <section id="sec-14" data-label="무료체험">
+      <div class="free-trial-section">
+        <h2 class="trial-title">무료체험 앱 다운로드</h2>
+        <p class="trial-desc">무료체험 코드를 입력하고 앱을 다운로드하세요</p>
+        <div class="trial-input-wrap">
+          <input
+            type="text"
+            id="trialCode"
+            class="trial-input"
+            placeholder="체험 코드를 입력하세요"
+            autocomplete="off"
+            autocapitalize="none"
+          >
+          <button id="downloadBtn" class="trial-btn" onclick="handleDownload()">
+            앱 다운로드
+          </button>
+        </div>
+        <p id="trialError" class="trial-error" style="display:none;">유효하지 않은 코드입니다. 다시 확인해 주세요.</p>
+      </div>
+    </section>
+
+    <section id="sec-15" data-label="카카오이용권">
+      <img src="11_카카오톡이용권발송.jpg" alt="카카오톡 이용권 발송" class="detail-img">
+    </section>
+
+    <div class="bottom-spacer"></div>
+
+  </main>
+
+  <!-- 하단 고정 구매 버튼 -->
+  <div class="sticky-bar">
+    <a href="PAYMENT_URL_HERE" class="buy-btn">지금 구매하기</a>
+  </div>
+
+  <!-- 앱 선택 모달 (PC용) -->
+  <div id="storeModal" class="modal-overlay" style="display:none;" onclick="closeModal(event)">
+    <div class="modal-box">
+      <p class="modal-title">앱 다운로드</p>
+      <p class="modal-desc">다운로드할 플랫폼을 선택하세요</p>
+      <div class="modal-buttons">
+        <a id="iosBtn" href="#" class="modal-store-btn ios-btn" target="_blank">
+          App Store<br><span>iOS / iPadOS</span>
+        </a>
+        <a id="androidBtn" href="#" class="modal-store-btn android-btn" target="_blank">
+          Play Store<br><span>Android</span>
+        </a>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('storeModal').style.display='none'">닫기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
